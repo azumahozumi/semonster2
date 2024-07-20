@@ -5,7 +5,7 @@ package org.example;
 
 public class App {
   public String getGreeting() {
-    return "hello SEMonster";
+    return "こんにちは SEMonster";
   }
 
   public static void main(String[] args) {
