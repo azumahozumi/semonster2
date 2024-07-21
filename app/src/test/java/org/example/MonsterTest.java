@@ -7,7 +7,7 @@ public class MonsterTest {
   @Test
   public void testSummonMonster1() {
     Monster monster = new Monster(0, 0);
-    Assert.assertEquals("スライム:レア度[0]\n", monster.toString());
+    Assert.assertEquals("SlimeRarity:[0]\n", monster.toString());
 
   }
 
