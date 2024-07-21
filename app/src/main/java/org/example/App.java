@@ -23,4 +23,19 @@ public class App {
 
   }
 
+  /**
+   * 指定した数の0~4(maxRandomNumber)のランダムな数値を作成し，LinkedListに格納して返却する
+   *
+   * @param randNum
+   * @return
+   */
+  public static LinkedList<Integer> createRandomList(int count) {
+    LinkedList<Integer> randNumList = new LinkedList<>();
+    for (int i = 0; i < count; i++) {
+      randNumList.add(random.nextInt(maxRandomNumber + 1));
+    }
+
+    return randNumList;
+  }
+
 }
