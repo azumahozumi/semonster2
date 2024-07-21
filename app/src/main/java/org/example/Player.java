@@ -9,11 +9,11 @@ public class Player {
   LinkedList<Integer> randomNumberList; // ランダムな0~4の数値リスト
   int hp; // プレイヤーのHP
 
-  // コンストラクタでHPの初期値も設定
-  Player(LinkedList<Integer> randomNumberList, String playerName, int initialHP) {
+  // コンストラクタ
+  Player(LinkedList<Integer> randomNumberList, String playerName) {
     this.randomNumberList = randomNumberList;
     this.name = playerName;
-    this.hp = initialHP;
+    this.hp = 100; // 初期HPを100に設定
     drawMonsters(); // プレイヤー作成時にモンスターを8体ドロー
   }
 
