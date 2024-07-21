@@ -14,6 +14,10 @@ public class Monster {
     return monsters[mnumber];
   }
 
+  void evolve() {
+    this.name = "Evolved " + this.name;
+  }
+
   @Override
   public String toString() {
 
