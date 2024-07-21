@@ -6,6 +6,7 @@ package org.example;
 import org.example.Monster;
 import java.util.LinkedList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class App {
   final static Random random = new Random();
@@ -15,11 +16,17 @@ public class App {
     return "Hello SEMonster";
   }
 
+  /**
+   * @param args
+   */
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
     SeMonsterGame mf = new SeMonsterGame(createRandomList(10));
-    mf.addPlayer("user");
-    mf.draw("user");
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("名前を入力して下さい＞");
+    String name = scanner.nextLine();
+    mf.addPlayer(name);
+    mf.draw(name);
 
   }
 
