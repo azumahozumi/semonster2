@@ -5,31 +5,34 @@ import java.util.LinkedList;
 
 public class SeMonsterGame {
 
-  HashMap<String, Player> playerMap = new HashMap<>();
-  LinkedList<Integer> randomNumberList = new LinkedList<Integer>();
+  private HashMap<String, Player> playerMap = new HashMap<>();
+  private LinkedList<Integer> randomNumberList;
 
-  /**
-   * 0~4までの値がランダムに一定数格納されたLinkedLIst
-   *
-   * @param randomNumberList
-   */
   SeMonsterGame(LinkedList<Integer> randomNumberList) {
     this.randomNumberList = randomNumberList;
   }
 
   /**
-   * プレイヤーを追加
+   * プレイヤーを追加するメソッド
    *
-   * @param playerName
+   * @param playerName プレイヤーの名前
    */
   void addPlayer(String playerName) {
     this.playerMap.put(playerName, new Player(randomNumberList, playerName));
   }
 
+  /**
+   * 指定したプレイヤーのモンスターを引き、そのデッキを表示するメソッド
+   *
+   * @param playerName プレイヤーの名前
+   */
   void draw(String playerName) {
     Player player = this.playerMap.get(playerName);
-    player.drawMonsters();
-    System.out.println(player);
+    if (player != null) {
+      player.drawMonsters();
+      System.out.println(player);
+    } else {
+      System.out.println("Player not found: " + playerName);
+    }
   }
-
 }
