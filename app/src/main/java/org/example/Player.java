@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Random;
 
 public class Player {
-  private static final List<String> PROFESSIONS = List.of(
+  // 職業リストをパブリックにする
+  public static final List<String> PROFESSIONS = List.of(
       "Warrior", "Mage", "Rogue", "Healer", "Hunter",
       "Bard", "Paladin", "Necromancer");
 
