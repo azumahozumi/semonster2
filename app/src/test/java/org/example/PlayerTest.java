@@ -1,14 +1,14 @@
 package org.example;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 import java.util.LinkedList;
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PlayerTest {
 
   @Test
-  void testRandomProfession() {
+  public void testRandomProfession() {
     // ランダムな数値リストを作成
     LinkedList<Integer> randomList = new LinkedList<>();
     for (int i = 0; i < 16; i++) {
@@ -23,7 +23,6 @@ public class PlayerTest {
         "Warrior", "Mage", "Rogue", "Healer", "Hunter",
         "Bard", "Paladin", "Necromancer");
 
-    assertTrue(professions.contains(player.profession),
-        "Player's profession should be one of the predefined professions.");
+    assertTrue(professions.contains(player.profession));
   }
 }
