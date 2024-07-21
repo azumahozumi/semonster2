@@ -25,15 +25,20 @@ public class App {
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
     SeMonsterGame mf = new SeMonsterGame(createRandomList(10));
+    String name = getNameFromUser();
+    mf.addPlayer(name);
+    mf.draw(name);
+
+  }
+
+  public static String getNameFromUser() {
     String name = "";
     Scanner scanner = new Scanner(System.in);
     while (name.isEmpty()) {
       System.out.print("名前を入力して下さい＞");
       name = scanner.nextLine();
     }
-    mf.addPlayer(name);
-    mf.draw(name);
-
+    return name;
   }
 
   /**
