@@ -1,3 +1,4 @@
+
 package org.example;
 
 import java.util.HashMap;
@@ -13,7 +14,7 @@ public class SeMonsterGame {
   }
 
   /**
-   * プレイヤーを追加するメソッド
+   * プレイヤーの名前を指定してを追加するメソッド
    *
    * @param playerName プレイヤーの名前
    */
