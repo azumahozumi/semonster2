@@ -10,6 +10,8 @@ public class AppTest {
   @Test
   public void testAppHasAGreeting() {
     App classUnderTest = new App();
+    String name = App.getNameFromUser();
+    assertEquals("TestName", name);
     assertEquals("Hello SEMonster", classUnderTest.getGreeting());
   }
 }

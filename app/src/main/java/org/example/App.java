@@ -4,6 +4,9 @@
 package org.example;
 
 import org.example.Monster;
+
+import com.google.common.base.Strings;
+
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
@@ -22,12 +25,20 @@ public class App {
   public static void main(String[] args) {
     System.out.println(new App().getGreeting());
     SeMonsterGame mf = new SeMonsterGame(createRandomList(10));
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("名前を入力して下さい＞");
-    String name = scanner.nextLine();
+    String name = getNameFromUser();
     mf.addPlayer(name);
     mf.draw(name);
 
+  }
+
+  public static String getNameFromUser() {
+    String name = "";
+    Scanner scanner = new Scanner(System.in);
+    while (name.isEmpty()) {
+      System.out.print("名前を入力して下さい＞");
+      name = scanner.nextLine();
+    }
+    return name;
   }
 
   /**
