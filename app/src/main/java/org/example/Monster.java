@@ -10,13 +10,13 @@ public class Monster {
   }
 
   String summonMonster(int mnumber) {
-    String monsters[] = { "スライム", "サハギン", "ドラゴン", "デュラハン", "シーサーペント" };
+    String monsters[] = { "Slime", "Sahagin", "Dragon", "Durahan", "Sea Serpent" };
     return monsters[mnumber];
   }
 
   @Override
   public String toString() {
 
-    return this.name + ":レア度[" + this.rare + "]\n";
+    return this.name + "Rarity:[" + this.rare + "]\n";
   }
 }
