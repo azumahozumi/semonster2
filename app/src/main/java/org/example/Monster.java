@@ -7,6 +7,9 @@ public class Monster {
   Monster(int nameNum, int rareNum) {
     this.name = this.summonMonster(nameNum);
     this.rare = rareNum;
+    if (this.rare >= 3) {
+      this.evolve();
+    }
   }
 
   String summonMonster(int mnumber) {
